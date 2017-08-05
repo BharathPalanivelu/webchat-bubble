@@ -1,0 +1,30 @@
+.container-bot{
+    padding:0 0 0 0;
+    height:100%;
+    z-index:1;
+}
+.container-image{
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    height:18%;
+    text-align: center;
+    position:relative;
+    z-index: 1;
+}
+.image-AI-logo{
+    width:55px;
+    height:55px;
+}
+.image-helper{
+    padding-top: calc(3.5vh);
+}
+.bot-iframe{
+  height:82%;
+  width:100%;
+  position:absolute;
+  box-shadow: 1px 1px 5px #969696;
+
+}
+

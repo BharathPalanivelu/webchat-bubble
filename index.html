@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Eagle</title>
+    <link rel="icon" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Advent+Pro|Cairo|Cantarell|Changa|Cookie|Jura|Oswald|Poiret+One|Roboto|Sintony" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap-native.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/botchat_leftbar.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+
+    <!-- Theme CSS -->
+    <link href="css/creative.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<style>
+/* General CSS  */
+html,body,.container {height:100%;}
+.no-padding {padding:0 0 0 0;}
+.test-unit *, .single-test {border:1px solid red;}
+/* End of General CSS */
+
+
+/* CSS - Form Elements */
+.form {
+    padding:30px 30px 30px 30px;
+}
+.file{
+    padding:5px 5px;
+}
+.topic {
+    text-align:center;
+    padding-top:20px;
+}
+.topic > h3 {
+    font-weight: 100;
+}
+hr {
+  border-color: #5970b3;
+  border-width: 2px;
+  max-width: 500px;
+}
+/* End of CSS of Form Element */
+/* CSS - Containers */
+.container {
+    width:100%;
+}
+.container-card {
+    background-color:#fff;
+    margin:30px 30px 0 30px;
+    border-radius:10px;
+    box-shadow: 1px 1px 5px #888888;
+    height:90%;
+    padding:0 40px 40px 40px;
+}
+.container-content{
+    position:relative;
+    margin:0 0 0 0;
+    padding:0 0 0 0;
+    height:calc(100% - 62px);
+}
+.container-form{
+    height:100%;
+    font-family:'Open Sans';
+}
+.container-form>form{
+    padding:10px 20px 0 20px;
+    overflow-y:auto; 
+    height:100%
+}
+/* End of CSS of Containers */
+
+/* CSS - Bootstrap Modifier */
+.navbar {
+    margin:0 0 0 0;
+    border-radius:0px;
+}
+
+.container {
+    display:table;
+    width: 100%;
+    margin-top: -50px;
+    padding: 50px 0 0 0; /*set left/right padding according to needs*/
+    box-sizing: border-box;
+}
+.col-md-9{
+    padding:0 0 0 0;
+}
+
+.brand {
+    color: white;
+
+
+    font-family: 'Oswald', sans-serif;
+
+
+
+
+    font-size: 30px;
+}
+
+.p2 {
+    color: white;
+
+
+    font-family: 'Cantarell', sans-serif;
+    font-size: 10px;
+}
+
+
+
+</style>
+</head>
+
+<body>
+<!--Navigation Bar-->
+
+
+
+    <!-- Bot -->
+    <div style="height:100%">
+        <div class="container-image">
+            <br>
+            <!--<div class="image-helper"><img class="image-AI-logo" src="img/eagle_logo.png"></div>-->
+            <div class="brand">
+                
+                <h3>Bot Framework</h3>
+                <p style="font-family: 'Cantarell', sans-serif;">Webchat Bubble Trial
+                </p>
+                
+            </div>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+    <!--End of "Bot"-->
+
+ <footer>
+     <div class="container-image">
+         <br>
+         <p>
+                
+         </p>
+     </div>
+
+
+</footer>
+
+
+    <!-- /.container -->
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+<script>
+    (function () {
+    var button = document.createElement("div");
+    document.getElementsByTagName('body')[0].appendChild(button);
+    button.outerHTML = "<div id='bot-button' style='height: 50px; width: 50px; position: fixed; cursor: pointer; bottom: 5%; right: 5%; border-radius:25px; box-shadow: 0px 0px 5px black; z-index: 1001; background-color: crimson'><img id='button-click' alt='Button' style='height:100%; width:100%;  z-index: 1002;' src='https://media.smooch.io/58cbbac741ea923900a4a74c/icons/web_button_icon.jpg'></div>"; 
+
+
+    var div = document.createElement("div");
+    document.getElementsByTagName('body')[0].appendChild(div);
+    div.outerHTML = "<div id='botDiv' style='height: 0px; position: fixed; bottom: 0; right: 0; z-index: 1000; background-color: #fff'><div id='botTitleBar' style='height: 38px; width: 400px; position:fixed; cursor: pointer;'></div><iframe width='400px' height='600px' src='iframe/bot.html'></iframe></div>"; 
+
+    document.querySelector('body').addEventListener('click', function (e) {
+        e.target.matches = e.target.matches || e.target.msMatchesSelector;
+        if (e.target.matches('#button-click')) { 
+            var botDiv = document.querySelector('#botDiv'); 
+            botDiv.style.height = botDiv.style.height == '600px' ? '0px' : '600px';
+            var botbutton = document.querySelector('#bot-button');
+            botbutton.style.height = botDiv.style.height == '600px' ? '0px' : '38px';
+
+        } else if (e.target.matches('#botTitleBar')) { 
+            var botDiv = document.querySelector('#botDiv'); 
+            botDiv.style.height = botDiv.style.height == '600px' ? '0px' : '600px';
+            var botbutton = document.querySelector('#bot-button');
+            botbutton.style.height = botDiv.style.height == '600px' ? '0px' : '50px';
+
+        };
+    });
+}());
+</script>
+
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+
+<!-- latest jQuery direct from google's CDN -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+ 
+
+ <!--instantiate after some browser sniffing to rule out webkit browsers-->
+
+
+</body>
+
+</html>
+ 
