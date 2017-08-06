@@ -39,7 +39,7 @@
 
     var div = document.createElement("div");
     document.getElementsByTagName('body')[0].appendChild(div);
-    div.outerHTML = "<div id='botDiv' style=' height:80%; box-shadow: 0px 0px 10px grey;  webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px; overflow:hidden; height: 0px; position: fixed; bottom: 20px; right: 40px; z-index: 1000; background-color: #fff'><div id='botTitleBar' style='height: 38px; width: 360px; position:fixed; cursor: pointer;'></div><iframe frameBorder='0' border-radius='20px' width='100%' height='100%' src='iframe/bot.html'></iframe></div>"; 
+    div.outerHTML = "<div id='botDiv' style=' height:80%; box-shadow: 0px 0px 10px grey;  webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px; overflow:hidden; height: 0px; position: fixed; bottom: 20px; right: 40px; z-index: 1000; background-color: #fff'><div id='botTitleBar' style='height: 38px; width: 360px; position:fixed; cursor: pointer;'></div><iframe frameBorder='0' border-radius='20px' width='100%' height='100%' src='https://webchat-embed-trial.azurewebsites.net/iframe/bot.html'></iframe></div>"; 
 
     document.querySelector('body').addEventListener('click', function (e) {
         e.target.matches = e.target.matches || e.target.msMatchesSelector;
