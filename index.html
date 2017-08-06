@@ -45,9 +45,21 @@
         e.target.matches = e.target.matches || e.target.msMatchesSelector;
         if (e.target.matches('#button-click')) { 
             var botDiv = document.querySelector('#botDiv'); 
-            botDiv.style.height = botDiv.style.height == '560px' ? '0px' : '560px';
             var botbutton = document.querySelector('#bot-button');
-            botbutton.style.height = botDiv.style.height == '560px' ? '0px' : '50px';
+            botbutton.style.height =  '0px' ;
+            var i = 0;
+            setInterval(function(){ 
+                if(i <= 560) {
+                botDiv.style.height = botDiv.style.height == '560px' ? '0px' : i+'px';
+                
+                i=i+10;
+                } else {
+                    clearInterval(intervalId);
+                }
+
+                }, 3);
+
+            
 
         } else if (e.target.matches('#botTitleBar')) { 
             var botDiv = document.querySelector('#botDiv'); 
