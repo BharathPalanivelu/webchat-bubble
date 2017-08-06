@@ -47,37 +47,35 @@
             var botDiv = document.querySelector('#botDiv'); 
             var botbutton = document.querySelector('#bot-button');
             botbutton.style.height =  '0px' ;
-            
+            botDiv.style.opacity = 1;
             var i = 0;
             setInterval(function(){ 
-                if(i <= 560) {
-                botDiv.style.height = botDiv.style.height == '560px' ? '0px' : i+'px';
-                botDiv.style.opacity = botDiv.style.height == '560px' ? '1' : i/1000;
+                if(i <= 80) {
+                botDiv.style.height = botDiv.style.height == '80%' ? '0px' : i+'%';
+                botDiv.style.opacity = botDiv.style.height == '80%' ? '1' : i/80;
                 
-                i=i+10;
+                i=i+1;
                 } else {
                     clearInterval();
                 }
 
-                }, 3);
-            botDiv.style.opacity = 1;
+                }, 2);
 
             
 
         } else if (e.target.matches('#botTitleBar')) { 
             var botDiv = document.querySelector('#botDiv'); 
             var botbutton = document.querySelector('#bot-button');
-            botbutton.style.height = botDiv.style.height == '560px' ? '0px' : '50px';
+            botbutton.style.height = botDiv.style.height == '80%' ? '0px' : '50px';
             
-            var i = 100;
+            var i = 80;
             setInterval(function(){ 
                 if(i >= 0) {
-                botDiv.style.height = botDiv.style.height == '560px' ? '0px' : i +'%';
-                botDiv.style.opacity = botDiv.style.height == '560px' ? '1' : i/100;
+                botDiv.style.height = botDiv.style.height == '80%' ? '0px' : i +'%';
+                botDiv.style.opacity = botDiv.style.height == '80%' ? '1' : i/100;
                 i=i-2;
                 } else {
                     clearInterval();
-                    
                     
                 }
 
