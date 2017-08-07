@@ -36,7 +36,6 @@
     document.getElementsByTagName('body')[0].appendChild(button);
     button.outerHTML = "<div id='bot-button' style='height: 50px; width: 50px; position: fixed; cursor: pointer; bottom: 6%; right: 5%; border-radius:25px; box-shadow: 0px 0px 5px black; z-index: 1001; background-color: rgb(183, 47, 42);'><img id='button-click' alt='Button' style='height:100%; width:100%;  z-index: 1002;' src='https://media.smooch.io/58cbbac741ea923900a4a74c/icons/web_button_icon.jpg'></div>"; 
 
-
     var div = document.createElement("div");
     document.getElementsByTagName('body')[0].appendChild(div);
     div.outerHTML = "<div id='botDiv' style=' height:80%; box-shadow: 0px 0px 10px grey;  webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px; overflow:hidden; height: 0px; position: fixed; bottom: 20px; right: 40px; z-index: 1000; background-color: #fff'><div id='botTitleBar' style='height: 38px; width: 360px; position:fixed; cursor: pointer;'></div><iframe frameBorder='0' border-radius='20px' width='100%' height='100%' src='https://webchat-embed-trial.azurewebsites.net/iframe/bot.html'></iframe></div>"; 
@@ -54,7 +53,7 @@
                 botDiv.style.height = botDiv.style.height == '80%' ? '0px' : i+'%';
                 botDiv.style.opacity = botDiv.style.height == '80%' ? '1' : i/80;
                 
-                i=i+1;
+                i=i+2;
                 } else {
                     clearInterval();
                 }
@@ -76,9 +75,7 @@
                 i=i-2;
                 } else {
                     clearInterval();
-                    
                 }
-
                 }, 2);
                 botbutton.style.height = botDiv.style.height == '0px' ? '0px' : '50px';
                 
